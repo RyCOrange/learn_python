@@ -4,8 +4,8 @@
 def bubble_sort(split_list):
     n = len(split_list)
     
-    for i in range(n):
-        for j in range(0, n - i - 1):
+    for i in range(n): # Iterates over entire list
+        for j in range(0, n - i - 1): # Iterates over the rest of the list (n - i - 1 = max value in what is left)
             if split_list[j] > split_list[j + 1]: # Compares current value with next value
                 split_list[j], split_list[j + 1] = split_list[j + 1], split_list[j] # Swaps value if current is larger than next
     
