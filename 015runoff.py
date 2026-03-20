@@ -4,9 +4,8 @@
 
 # Define candidate class
 class candidate:
-    def __init__(self, name, votes, vote_rank):
+    def __init__(self, name, vote_rank):
         self.name = name
-        self.votes = votes
         self.vote_rank = vote_rank
 
 def votes(candidate_list, num_voters):
@@ -14,7 +13,7 @@ def votes(candidate_list, num_voters):
         print(f"\nVoter {i + 1}:")
         for rank in range(1, 4):  # ranks 1, 2, 3
             name = input(f"Rank {rank}: ").strip()
-            for candidate in candidate_list:
+            for candidate in candidate_list: # The lower the voter rank, the better the score
                 if candidate.name == name:
                     candidate.vote_rank += rank
     
